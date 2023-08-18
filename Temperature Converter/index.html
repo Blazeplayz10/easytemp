@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter - convert temperatures</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Temperature converter</h1>
+
+
+        <input type="text" name="" id="no" placeholder="Enter a number"><br>
+        <p style="color: dodgerblue;">Convert from:</p>
+        <div id="buttons">
+            <button id="ftc">Celsius to Farenheit</button>
+            <button id="ctf">Farenheit to Celsius</button>
+
+            <button id="ktf">Kelvin to Farenheit</button>
+            <button id="ftk">Farenheit to Kelvin</button>
+
+            <button id="ctk">Celsius to Kelvin</button>
+            <button id="ktc">Kelvin to Celsius</button>
+
+            <button id="clr">Clear Converter</button>
+        </div>
+
+        <!-- ktc = -273.15 
+        ktc-->
+
+        <p>The Result is:</p>
+        <div id="res"></div>
+    </div>
+
+    
+
+    <script>
+        let no = document.getElementById("no")
+
+        let ctf = document.getElementById("ctf")
+        ctf.addEventListener("click", function () {
+            res.innerText = parseInt(no.value - 32) * 5 / 9 + "°C"
+        })
+
+        let ftc = document.getElementById("ftc")
+        ftc.addEventListener("click", function () {
+            res.innerText = parseInt(no.value) * 9 / 5 + 32 + "°F"
+        })
+
+
+        let ktf = document.getElementById("ktf")
+        ktf.addEventListener("click", function(){
+            res.innerText = parseInt(no.value-273)*9/5+32 + "°F"
+        })
+
+        let ftk = document.getElementById("ftk")
+        ftk.addEventListener("click", function(){
+            res.innerText = parseInt(no.value-32)*5/9+273 +"°K"
+        })
+
+        let ctk = document.getElementById("ctk")
+        ctk.addEventListener("click", function(){
+            res.innerText = parseInt(no.value)+273 + "°K"
+        })
+
+        let ktc = document.getElementById("ktc")
+        ktc.addEventListener("click", function(){
+            res.innerText = parseInt(no.value)-273 + "°C"
+        })
+
+        let clear = document.getElementById("clr")
+        clear.addEventListener("click", function () {
+            no.value = ""
+            res.innerText = ""
+        })
+
+        // let a =[
+        //     "Banana",
+        //     "Rice",
+        //     "Deez Nuts",
+        //     "Ligma"
+        // ]
+
+        // for (let i = 0; i <= 10 ; i++) {
+        //     console.log(i)
+        // }
+
+
+        // let banana = [1,2,3,4,5,6,7,8,9]
+        // var deez = 0
+        // while (deez<9) {
+        //     console.log(banana[deez])
+        //     deez++
+        // }
+
+        // for (let i = 0; i < 9; i++) {
+        //     console.log(banana[i])
+            
+        // }
+
+        // // for (let i = 0; i < 5; i++) {
+        // //     console.log("Hello");
+            
+        // // }
+
+
+    </script>
+    <script src="./script.ts"></script>
+</body>
+
+</html>

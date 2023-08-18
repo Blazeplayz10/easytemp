@@ -1,0 +1,61 @@
+body{
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: dodgerblue;
+    font-weight: bolder;
+}
+
+.main{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh;
+    border: 3px solid gray; 
+    border-radius: 20px;
+    background-color: white;
+    width: 40%;
+}
+
+#no{
+    width: 50%;
+    height: 30px;
+}
+
+#buttons{
+    border-radius: 30px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 5px;
+    width: 50%;
+}
+
+button{
+   background-color: dodgerblue; 
+   color: white;
+   border-radius: 20px;
+   border: none;
+   height: 30px;
+}
+
+#clr{
+    border-radius: 10px; 
+    background-color: red; 
+    color: white;
+    border: none;
+    grid-column: span 2;
+    height: 30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .main{
+        width: 100%
+    }
+
+    .main h1{
+        text-align: center;
+    }    
+}
